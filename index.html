@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polinización Cecyteh</title>
+  <meta name="description" content="Proyecto escolar de polinización — Cecyteh. Jardines polinizadores y su impacto en el medio ambiente." />
+
+  <!-- ✅ Google Fonts: Cambia las fuentes aquí si lo deseas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR FIJO
+  ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Brand -->
+      <!-- ✅ El logo usa la imagen subida. Asegúrate de tener "img/logo.png" en tu carpeta -->
+      <a href="#inicio" class="nav-brand">
+        <img src="img/logo.png" alt="Polinización Cecyteh" class="brand-logo" />
+        <span class="brand-text">Polinización <strong>Cecyteh</strong></span>
+      </a>
+
+      <!-- Links de escritorio -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#que-es" class="nav-link">¿Qué es?</a></li>
+        <li><a href="#polinizadores" class="nav-link">Polinizadores</a></li>
+        <li><a href="#proceso" class="nav-link">Proceso</a></li>
+        <li><a href="#evidencia" class="nav-link">Evidencia</a></li>
+        <li><a href="#filosofia" class="nav-link">Filosofía</a></li>
+        <li><a href="#equipo" class="nav-link">Equipo</a></li>
+        <li><a href="#conclusion" class="nav-link">Conclusión</a></li>
+      </ul>
+
+      <!-- Controles: modo oscuro + hamburguesa -->
+      <div class="nav-controls">
+        <!-- Botón reproducir música de fondo -->
+        <button class="btn-music" id="btnMusic" title="Reproducir música de fondo" aria-label="Reproducir música">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </button>
+        <!-- ✅ Botón modo oscuro/claro -->
+        <button class="btn-theme" id="btnTheme" title="Cambiar tema" aria-label="Cambiar tema">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <!-- Hamburguesa -->
+        <button class="btn-hamburger" id="btnHamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Overlay del menú móvil -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- Audio de fondo (música ambiental)
+       ✅ REEMPLAZA "audio/musica-fondo.mp3" con tu archivo de música -->
+  <audio id="bgMusic" loop>
+    <source src="audio/musica-fondo.mp3" type="audio/mpeg" />
+  </audio>
+
+
+  <!-- ============================================================
+       SECCIÓN 1: HERO / INICIO
+  ============================================================ -->
+  <section id="inicio" class="section hero">
+    <!-- ✅ Cambia la imagen de fondo en styles.css buscando ".hero::before" -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up">Polinización Cecyteh · 2026</p>
+      <h1 class="hero-title reveal-up delay-1">El Jardín<br/><em>que Da Vida</em></h1>
+      <p class="hero-subtitle reveal-up delay-2">Un proyecto de <strong>Polinización Cecyteh</strong> donde la naturaleza florece,<br/>los polinizadores encuentran hogar<br/>y el futuro comienza.</p>
+      <div class="hero-actions reveal-up delay-3">
+        <a href="#que-es" class="btn btn-primary">Explorar proyecto</a>
+        <a href="#proceso" class="btn btn-ghost">Ver proceso</a>
+      </div>
+    </div>
+    <!-- Indicador de scroll -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span></span>
+      <p>Desliza hacia abajo</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 2: ¿QUÉ ES UN JARDÍN POLINIZADOR?
+  ============================================================ -->
+  <section id="que-es" class="section section-light">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Fundamentos</span>
+        <h2 class="section-title">¿Qué es un Jardín Polinizador?</h2>
+      </div>
+      <div class="two-col">
+        <div class="text-col reveal-left">
+          <p class="lead">Un <strong>jardín polinizador</strong> es un espacio diseñado intencionalmente para atraer, alimentar y proteger a los animales que realizan la polinización: abejas, mariposas, colibríes y otros insectos beneficiosos.</p>
+          <p>A diferencia de un jardín ornamental común, este tipo de jardín selecciona plantas nativas que ofrecen néctar y polen durante todo el año, creando un ecosistema vivo y autosuficiente.</p>
+          <p>Cada flor, cada hoja y cada rama tiene un propósito: sostener la cadena alimentaria y garantizar la reproducción de las plantas silvestres.</p>
+          <!-- ✅ Botón de audio de sección. Cambia "audio/audio1.mp3" -->
+          <button class="btn-audio" data-src="audio/audio1.mp3" aria-label="Escuchar audio de esta sección">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Escuchar explicación
+          </button>
+        </div>
+        <div class="visual-col reveal-right">
+          <!-- ✅ Cambia "img/jardin1.jpg" por tu imagen real -->
+          <div class="img-frame">
+            <img src="img/jardin1.jpg" alt="Jardín polinizador" loading="lazy" onerror="this.parentElement.classList.add('img-placeholder')" />
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-num">75<sup>%</sup></span>
+              <span class="stat-label">de cultivos dependen de polinizadores</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">20k+</span>
+              <span class="stat-label">especies de abejas en el mundo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 3: POLINIZADORES
+  ============================================================ -->
+  <section id="polinizadores" class="section section-green">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag light">Biodiversidad</span>
+        <h2 class="section-title light">Nuestros Polinizadores</h2>
+        <p class="section-desc light">Los grandes héroes invisibles del ecosistema</p>
+      </div>
+      <!-- ✅ Botón de audio de sección. Cambia "audio/audio2.mp3" -->
+      <div class="audio-bar reveal-up">
+        <button class="btn-audio light" data-src="audio/audio2.mp3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Escuchar sobre polinizadores
+        </button>
+      </div>
+      <div class="cards-grid">
+        <!-- Card: Abeja -->
+        <article class="poll-card reveal-up">
+          <div class="poll-icon">🐝</div>
+          <h3>Abejas</h3>
+          <p>Las principales polinizadoras del planeta. Transportan el polen en cestas especiales de sus patas traseras. Una colonia puede polinizar millones de flores al día.</p>
+          <span class="poll-tag">Insecto</span>
+        </article>
+        <!-- Card: Mariposa -->
+        <article class="poll-card reveal-up delay-1">
+          <div class="poll-icon">🦋</div>
+          <h3>Mariposas</h3>
+          <p>Polinizan mientras se alimentan de néctar. Prefieren flores planas y coloridas. Son también bioindicadores de la salud del ecosistema.</p>
+          <span class="poll-tag">Insecto</span>
+        </article>
+        <!-- Card: Colibrí -->
+        <article class="poll-card reveal-up delay-2">
+          <div class="poll-icon">🐦</div>
+          <h3>Colibríes</h3>
+          <p>Los únicos pájaros polinizadores en América. Se alimentan de flores tubulares rojas y naranjas, transportando el polen en su pico y plumaje.</p>
+          <span class="poll-tag">Ave</span>
+        </article>
+        <!-- Card: Abejorro -->
+        <article class="poll-card reveal-up delay-3">
+          <div class="poll-icon">🪲</div>
+          <h3>Abejorros</h3>
+          <p>Más grandes que las abejas y extremadamente eficientes. Utilizan la "polinización sónica" vibrando a una frecuencia que libera el polen de las flores.</p>
+          <span class="poll-tag">Insecto</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 4: PROCESO (VIDEOS)
+  ============================================================ -->
+  <section id="proceso" class="section section-light">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Documentación</span>
+        <h2 class="section-title">Nuestro Proceso</h2>
+        <p class="section-desc">De la semilla a la flor, paso a paso</p>
+      </div>
+      <!-- ✅ Botón de audio de sección. Cambia "audio/audio3.mp3" -->
+      <div class="audio-bar reveal-up">
+        <button class="btn-audio" data-src="audio/audio3.mp3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Narrativa del proceso
+        </button>
+      </div>
+      <div class="process-steps">
+        <!-- Paso 1 -->
+        <div class="process-step reveal-up">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Planificación y Diseño</h3>
+            <p>Investigamos las plantas nativas de nuestra región y diseñamos la distribución del jardín considerando luz solar, espacio y necesidades de cada especie.</p>
+            <!-- ✅ Reemplaza con tu archivo de video: "video/proceso1.mp4" -->
+            <div class="video-wrapper">
+              <video controls preload="none" poster="img/thumb1.jpg">
+                <source src="video/proceso1.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+              </video>
+            </div>
+          </div>
+        </div>
+        <!-- Paso 2 -->
+        <div class="process-step reveal-up delay-1">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Preparación del Suelo</h3>
+            <p>Realizamos pruebas de pH y enriquecimos la tierra con composta orgánica para garantizar las condiciones óptimas para las plantas nativas.</p>
+            <!-- ✅ Reemplaza con tu archivo de video: "video/proceso2.mp4" -->
+            <div class="video-wrapper">
+              <video controls preload="none" poster="img/thumb2.jpg">
+                <source src="video/proceso2.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+              </video>
+            </div>
+          </div>
+        </div>
+        <!-- Paso 3 -->
+        <div class="process-step reveal-up delay-2">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Siembra y Trasplante</h3>
+            <p>Sembramos una variedad de plantas nativas: lavanda, girasoles, salvia, zinnia y cempasúchil para asegurar floración continua durante el año.</p>
+            <!-- ✅ Reemplaza con tu archivo de video: "video/proceso3.mp4" -->
+            <div class="video-wrapper">
+              <video controls preload="none" poster="img/thumb3.jpg">
+                <source src="video/proceso3.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+              </video>
+            </div>
+          </div>
+        </div>
+        <!-- Paso 4 -->
+        <div class="process-step reveal-up delay-3">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Observación y Resultados</h3>
+            <p>Documentamos la llegada de polinizadores, monitoreamos el crecimiento de las plantas y registramos evidencia fotográfica y en video del ecosistema en acción.</p>
+            <!-- ✅ Reemplaza con tu archivo de video: "video/proceso4.mp4" -->
+            <div class="video-wrapper">
+              <video controls preload="none" poster="img/thumb4.jpg">
+                <source src="video/proceso4.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 5: EVIDENCIA / GALERÍA
+  ============================================================ -->
+  <section id="evidencia" class="section section-earth">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag light">Galería</span>
+        <h2 class="section-title light">Evidencia Fotográfica</h2>
+        <p class="section-desc light">Haz clic en las imágenes para verlas en detalle</p>
+      </div>
+      <!-- ✅ Botón de audio de sección. Cambia "audio/audio4.mp3" -->
+      <div class="audio-bar reveal-up">
+        <button class="btn-audio light" data-src="audio/audio4.mp3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Descripción de evidencias
+        </button>
+      </div>
+      <!-- GALERÍA: Agrega o quita imágenes aquí. Cambia "img/galeria1.jpg" etc. -->
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-up" data-caption="Primeros brotes en el jardín">
+          <img src="img/galeria1.jpg" alt="Primeros brotes" loading="lazy" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>🔍 Ver foto</span></div>
+        </div>
+        <div class="gallery-item reveal-up delay-1" data-caption="Abeja visitando una flor">
+          <img src="img/galeria2.jpg" alt="Abeja en flor" loading="lazy" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>🔍 Ver foto</span></div>
+        </div>
+        <div class="gallery-item reveal-up delay-2" data-caption="Mariposa monarca en el jardín">
+          <img src="img/galeria3.jpg" alt="Mariposa monarca" loading="lazy" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>🔍 Ver foto</span></div>
+        </div>
+        <div class="gallery-item reveal-up delay-3" data-caption="Equipo trabajando en el jardín">
+          <img src="img/galeria4.jpg" alt="Equipo trabajando" loading="lazy" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>🔍 Ver foto</span></div>
+        </div>
+        <div class="gallery-item reveal-up" data-caption="Flores de lavanda en floración">
+          <img src="img/galeria5.jpg" alt="Flores de lavanda" loading="lazy" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>🔍 Ver foto</span></div>
+        </div>
+        <div class="gallery-item reveal-up delay-1" data-caption="Vista general del jardín terminado">
+          <img src="img/galeria6.jpg" alt="Jardín terminado" loading="lazy" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>🔍 Ver foto</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox para galería -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Siguiente">›</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       SECCIÓN 6: FILOSOFÍA
+  ============================================================ -->
+  <section id="filosofia" class="section section-light">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Valores</span>
+        <h2 class="section-title">Nuestra Filosofía</h2>
+      </div>
+      <div class="philosophy-layout">
+        <blockquote class="big-quote reveal-up">
+          <p>"La tierra no es una herencia de nuestros padres,<br/>sino un préstamo de nuestros hijos."</p>
+          <footer>— Proverbio Indígena</footer>
+        </blockquote>
+        <div class="philosophy-pillars reveal-up">
+          <div class="pillar">
+            <span class="pillar-icon">🌱</span>
+            <h3>Conexión</h3>
+            <p>Entender que somos parte de la naturaleza, no sus dueños. Cada acción humana tiene un impacto en la red de la vida.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">♻️</span>
+            <h3>Regeneración</h3>
+            <p>Preferir sistemas que se autosustentan y se renuevan, reduciendo la intervención humana y los insumos externos.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">🤝</span>
+            <h3>Comunidad</h3>
+            <p>La biodiversidad prospera en comunidad. Así también los proyectos humanos: este jardín nació de la colaboración.</p>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">👁️</span>
+            <h3>Consciencia</h3>
+            <p>Observar antes de actuar. El jardín nos enseñó a mirar con más atención el mundo que nos rodea.</p>
+          </div>
+        </div>
+        <!-- ✅ Botón de audio de sección. Cambia "audio/audio5.mp3" -->
+        <div class="audio-bar reveal-up">
+          <button class="btn-audio" data-src="audio/audio5.mp3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Escuchar nuestra filosofía
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 7: MEDIO AMBIENTE
+  ============================================================ -->
+  <section id="medio-ambiente" class="section section-green">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag light">Impacto</span>
+        <h2 class="section-title light">Impacto en el Medio Ambiente</h2>
+      </div>
+      <!-- ✅ Botón de audio de sección. Cambia "audio/audio6.mp3" -->
+      <div class="audio-bar reveal-up">
+        <button class="btn-audio light" data-src="audio/audio6.mp3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Impacto ambiental explicado
+        </button>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-item reveal-up">
+          <div class="impact-icon">💧</div>
+          <h3>Captura de Agua</h3>
+          <p>Las plantas nativas tienen raíces profundas que mejoran la infiltración del agua pluvial, reduciendo la escorrentía y recargando los mantos freáticos.</p>
+        </div>
+        <div class="impact-item reveal-up delay-1">
+          <div class="impact-icon">🌡️</div>
+          <h3>Reducción de Temperatura</h3>
+          <p>Un jardín de 10 m² puede reducir la temperatura local hasta 3°C mediante la evapotranspiración, combatiendo las islas de calor urbanas.</p>
+        </div>
+        <div class="impact-item reveal-up delay-2">
+          <div class="impact-icon">🫁</div>
+          <h3>Calidad del Aire</h3>
+          <p>Las plantas absorben CO₂ y partículas contaminantes, liberando oxígeno puro y creando un microclima más saludable para la comunidad.</p>
+        </div>
+        <div class="impact-item reveal-up delay-3">
+          <div class="impact-icon">🦎</div>
+          <h3>Refugio de Fauna</h3>
+          <p>Además de polinizadores, el jardín alberga insectos beneficiosos, pequeños reptiles y aves, contribuyendo a la biodiversidad urbana local.</p>
+        </div>
+        <div class="impact-item reveal-up">
+          <div class="impact-icon">🍎</div>
+          <h3>Seguridad Alimentaria</h3>
+          <p>Al apoyar a los polinizadores, protegemos indirectamente el 35% de la producción agrícola mundial que depende de estos organismos.</p>
+        </div>
+        <div class="impact-item reveal-up delay-1">
+          <div class="impact-icon">🌍</div>
+          <h3>Resiliencia Climática</h3>
+          <p>Los ecosistemas ricos en biodiversidad son más resistentes a los fenómenos climáticos extremos y se recuperan más rápido de perturbaciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 8: EQUIPO
+  ============================================================ -->
+  <section id="equipo" class="section section-light">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Personas</span>
+        <h2 class="section-title">Nuestro Equipo</h2>
+        <p class="section-desc">Las personas detrás del jardín</p>
+      </div>
+      <!-- ✅ AGREGA O MODIFICA LOS MIEMBROS DEL EQUIPO AQUÍ -->
+      <!-- ✅ Cambia las imágenes: "img/equipo1.jpg", "img/equipo2.jpg", etc. -->
+      <div class="team-grid">
+        <div class="team-card reveal-up">
+          <div class="team-photo">
+            <img src="img/equipo1.jpg" alt="Miembro 1" loading="lazy" onerror="this.parentElement.classList.add('no-photo')" />
+          </div>
+          <div class="team-info">
+            <h3>Nombre Apellido</h3>
+            <p class="team-role">Investigación y diseño</p>
+            <p class="team-bio">Responsable del análisis de plantas nativas y el diseño espacial del jardín.</p>
+          </div>
+        </div>
+        <div class="team-card reveal-up delay-1">
+          <div class="team-photo">
+            <img src="img/equipo2.jpg" alt="Miembro 2" loading="lazy" onerror="this.parentElement.classList.add('no-photo')" />
+          </div>
+          <div class="team-info">
+            <h3>Nombre Apellido</h3>
+            <p class="team-role">Documentación y fotografía</p>
+            <p class="team-bio">Capturó cada momento del proceso con su lente, creando el registro visual del proyecto.</p>
+          </div>
+        </div>
+        <div class="team-card reveal-up delay-2">
+          <div class="team-photo">
+            <img src="img/equipo3.jpg" alt="Miembro 3" loading="lazy" onerror="this.parentElement.classList.add('no-photo')" />
+          </div>
+          <div class="team-info">
+            <h3>Nombre Apellido</h3>
+            <p class="team-role">Siembra y cuidado</p>
+            <p class="team-bio">Lideró las actividades de siembra, riego y mantenimiento del ecosistema vivo.</p>
+          </div>
+        </div>
+        <div class="team-card reveal-up delay-3">
+          <div class="team-photo">
+            <img src="img/equipo4.jpg" alt="Miembro 4" loading="lazy" onerror="this.parentElement.classList.add('no-photo')" />
+          </div>
+          <div class="team-info">
+            <h3>Nombre Apellido</h3>
+            <p class="team-role">Comunicación y presentación</p>
+            <p class="team-bio">Elaboró los materiales de difusión y coordinó la presentación del proyecto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 9: CONCLUSIÓN
+  ============================================================ -->
+  <section id="conclusion" class="section section-earth">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag light">Reflexión</span>
+        <h2 class="section-title light">Conclusión</h2>
+      </div>
+      <!-- ✅ Botón de audio de sección. Cambia "audio/audio7.mp3" -->
+      <div class="audio-bar reveal-up">
+        <button class="btn-audio light" data-src="audio/audio7.mp3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Escuchar conclusión
+        </button>
+      </div>
+      <div class="conclusion-layout">
+        <div class="conclusion-text reveal-left">
+          <p class="lead light">Este proyecto nos demostró que el acto más pequeño, plantar una semilla, puede desencadenar una cadena de vida que va mucho más allá de lo que podemos imaginar.</p>
+          <p class="light-text">Aprendimos que la naturaleza no necesita que la controlemos, sino que la acompañemos. Que cada especie tiene su lugar en el tejido de la vida, y que remover uno de esos hilos tiene consecuencias que se propagan silenciosamente.</p>
+          <p class="light-text">El jardín polinizador que construimos no es un fin, sino un principio. Un punto de partida desde el cual seguir observando, aprendiendo y actuando con mayor responsabilidad hacia el planeta que habitamos.</p>
+        </div>
+        <div class="conclusion-nums reveal-right">
+          <div class="big-num">
+            <span class="num">12+</span>
+            <span class="num-label">especies de plantas sembradas</span>
+          </div>
+          <div class="big-num">
+            <span class="num">6</span>
+            <span class="num-label">semanas de trabajo activo</span>
+          </div>
+          <div class="big-num">
+            <span class="num">∞</span>
+            <span class="num-label">impacto en el ecosistema local</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECCIÓN 10: MENSAJE FINAL
+  ============================================================ -->
+  <section id="mensaje" class="section hero-final">
+    <div class="hero-overlay"></div>
+    <div class="final-content reveal-up">
+      <span class="section-tag light">Mensaje Final</span>
+      <h2 class="final-title">Tú también puedes<br/><em>hacer la diferencia</em></h2>
+      <p class="final-desc">Un jardín, un árbol, una maceta. No importa el tamaño. Lo que importa es el compromiso con la vida.</p>
+      <!-- ✅ Botón de audio del mensaje final. Cambia "audio/audio8.mp3" -->
+      <button class="btn-audio light large" data-src="audio/audio8.mp3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Escuchar mensaje final
+      </button>
+      <div class="final-actions">
+        <a href="#inicio" class="btn btn-primary">Ver desde el principio</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Logo Polinización Cecyteh" class="footer-logo" />
+        <span>Polinización <strong>Cecyteh</strong></span>
+      </div>
+      <p class="footer-copy">Proyecto escolar · 2026 · Hecho por el 6to C</p>
+      <p class="footer-school">
+        <!-- ✅ Cambia el nombre de tu plantel aquí -->
+        CECyTEH · Epazoyucan · Hidalgo, México
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       BOTONES FLOTANTES
+  ============================================================ -->
+  <!-- Botón volver arriba -->
+  <button class="btn-top" id="btnTop" aria-label="Volver arriba" title="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ✅ Botón flotante TikTok — redirige a https://www.tiktok.com/ -->
+  <a href="https://www.tiktok.com/@cecyte_polinizacion?_r=1&_t=ZS-960BilubVdl" target="_blank" rel="noopener noreferrer" class="btn-tiktok" aria-label="Visitar nuestro TikTok" title="Síguenos en TikTok">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l-.01-8.91a8.16 8.16 0 0 0 4.77 1.52V4.47a4.85 4.85 0 0 1-1-.02z"/>
+    </svg>
+    <span>TikTok</span>
+  </a>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>

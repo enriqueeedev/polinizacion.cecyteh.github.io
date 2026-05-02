@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>En Mantenimiento · Polinización Cecyteh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="mantenimiento.css" />
+</head>
+<body>
+
+  
+  <div class="particles" aria-hidden="true">
+    <span class="particle">🌿</span>
+    <span class="particle">🌸</span>
+    <span class="particle">🐝</span>
+    <span class="particle">🌼</span>
+    <span class="particle">🦋</span>
+    <span class="particle">🌱</span>
+    <span class="particle">🌻</span>
+    <span class="particle">🐝</span>
+  </div>
+
+  <main class="maintenance-page">
+
+    
+    <div class="brand reveal">
+      
+      <img src="img/logo.png" alt="Polinización Cecyteh" class="brand-logo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+      
+      <div class="brand-fallback" style="display:none">🌿</div>
+      <div class="brand-text">
+        <span class="brand-sub">Polinización</span>
+        <span class="brand-name">Cecyteh</span>
+      </div>
+    </div>
+
+    
+    <div class="center-icon reveal delay-1" aria-hidden="true">
+      <div class="icon-ring ring-1"></div>
+      <div class="icon-ring ring-2"></div>
+      <div class="icon-ring ring-3"></div>
+      <span class="icon-bee">🐝</span>
+    </div>
+
+    
+    <div class="content reveal delay-2">
+      <p class="eyebrow">Volvemos pronto</p>
+      <h1 class="title">
+        Página en
+        <em>Mantenimiento</em>
+      </h1>
+      <p class="desc">
+        Estamos trabajando para mejorar tu experiencia.<br />
+        Nuestro pagina pronto estara lista.
+      </p>
+    </div>
+
+    
+    <div class="progress-wrap reveal delay-3" aria-label="Progreso del mantenimiento">
+      <div class="progress-header">
+        <span>Progreso</span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-fill" id="progressFill"></div>
+        <div class="progress-bee" aria-hidden="true">🐝</div>
+      </div>
+    </div>
+
+    <!-- Contador regresivo -->
+    <div class="countdown reveal delay-3" aria-label="Tiempo restante">
+      <div class="count-item">
+        <span class="count-num" id="cDias">00</span>
+        <span class="count-label">Días</span>
+      </div>
+      <span class="count-sep" aria-hidden="true">:</span>
+      <div class="count-item">
+        <span class="count-num" id="cHoras">00</span>
+        <span class="count-label">Horas</span>
+      </div>
+      <span class="count-sep" aria-hidden="true">:</span>
+      <div class="count-item">
+        <span class="count-num" id="cMinutos">00</span>
+        <span class="count-label">Minutos</span>
+      </div>
+      <span class="count-sep" aria-hidden="true">:</span>
+      <div class="count-item">
+        <span class="count-num" id="cSegundos">00</span>
+        <span class="count-label">Segundos</span>
+      </div>
+    </div>
+
+    <!-- Tarjetas informativas -->
+    <div class="info-cards reveal delay-3">
+      <div class="info-card">
+        <span class="info-icon" aria-hidden="true">🔧</span>
+        <h3>¿Qué estamos haciendo?</h3>
+        <p>Mejorando el diseño y agregando nuevo contenido sobre nuestro jardín polinizador.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" aria-hidden="true">📅</span>
+        <h3>¿Cuándo regresamos?</h3>
+        <p>Pronto. Estamos trabajando para volver con una experiencia mucho mejor para ti.</p>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" aria-hidden="true">📲</span>
+        <h3>¿Tienes dudas?</h3>
+        <p>Visita nuestro TikTok para ver avances del proyecto mientras tanto.</p>
+      </div>
+    </div>
+
+   
+    <a href="https://www.tiktok.com/@cecyte_polinizacion?_r=1&_t=ZS-960BilubVdl" target="_blank" rel="noopener noreferrer"
+       class="btn-tiktok reveal delay-3">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l-.01-8.91a8.16 8.16 0 0 0 4.77 1.52V4.47a4.85 4.85 0 0 1-1-.02z"/>
+      </svg>
+      Síguenos en TikTok
+    </a>
+
+    
+    <footer class="mini-footer reveal">
+      <p>© 2026 Polinización Cecyteh · EnriqueDev</p>
+    </footer>
+
+  </main>
+
+  <script src="mantenimiento.js"></script>
+</body>
+</html>

@@ -9,9 +9,8 @@
 
 /* ----------------------------------------------------------------
    Formato: año, mes (0=enero, 11=diciembre), día, hora, minuto
-   Ejemplo actual: 4 de mayo de 2026, a las 12:00
    ---------------------------------------------------------------- */
-const FECHA_OBJETIVO = new Date(2026, 4, 4, 12, 0, 0);
+const FECHA_OBJETIVO = new Date('2026-05-04T23:59:00');
 /* ---------------------------------------------------------------- */
 
 
@@ -85,10 +84,10 @@ function initCountdown() {
     const diff   = FECHA_OBJETIVO - ahora;
 
     if (diff <= 0) {
-      
-      [elDias, elHoras, elMinutos, elSegundos].forEach(el => {
-        animateFlip(el, '00');
-      });
+      animateFlip(elDias,      '00');
+      animateFlip(elHoras,     '00');
+      animateFlip(elMinutos,   '00');
+      animateFlip(elSegundos,  '00');
       return;
     }
 
@@ -97,10 +96,10 @@ function initCountdown() {
     const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const segs    = Math.floor((diff % (1000 * 60)) / 1000);
 
-    animateFlip(elDias,     pad(dias));
-    animateFlip(elHoras,    pad(horas));
-    animateFlip(elMinutos,  pad(minutos));
-    animateFlip(elSegundos, pad(segs));
+    animateFlip(elDias,      pad(dias));
+    animateFlip(elHoras,     pad(horas));
+    animateFlip(elMinutos,   pad(minutos));
+    animateFlip(elSegundos,  pad(segs));
   }
 
   update();

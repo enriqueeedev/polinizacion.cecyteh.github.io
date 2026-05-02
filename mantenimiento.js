@@ -8,14 +8,13 @@
 'use strict';
 
 /* ----------------------------------------------------------------
-   ✅ CAMBIA LA FECHA AQUÍ:
    Formato: año, mes (0=enero, 11=diciembre), día, hora, minuto
-   Ejemplo actual: 15 de junio de 2025, a las 12:00
+   Ejemplo actual: 4 de mayo de 2026, a las 12:00
    ---------------------------------------------------------------- */
-const FECHA_OBJETIVO = new Date(2025, 5, 15, 12, 0, 0);
+const FECHA_OBJETIVO = new Date(2026, 4, 4, 12, 0, 0);
 /* ---------------------------------------------------------------- */
 
-/* ✅ Cambia el porcentaje de progreso (0 a 100) */
+
 const PROGRESO = 65;
 
 
@@ -48,7 +47,7 @@ function initProgress() {
   const pct  = document.getElementById('progressPct');
   if (!fill || !bee || !pct) return;
 
-  // Animar después de 800ms para que se vea el efecto
+  
   setTimeout(() => {
     const val = Math.min(100, Math.max(0, PROGRESO));
     fill.style.width = `${val}%`;
@@ -75,7 +74,7 @@ function initCountdown() {
   function animateFlip(el, newVal) {
     if (el.textContent === newVal) return;
     el.classList.remove('flip');
-    void el.offsetWidth; // reflow para reiniciar animación
+    void el.offsetWidth; 
     el.textContent = newVal;
     el.classList.add('flip');
     setTimeout(() => el.classList.remove('flip'), 350);
@@ -86,7 +85,7 @@ function initCountdown() {
     const diff   = FECHA_OBJETIVO - ahora;
 
     if (diff <= 0) {
-      // Ya llegó la fecha — mostrar ceros
+     
       [elDias, elHoras, elMinutos, elSegundos].forEach(el => {
         animateFlip(el, '00');
       });

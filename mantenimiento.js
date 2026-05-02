@@ -2,9 +2,9 @@
 
 /* ----------------------------------------------------------------
    Formato: año, mes (0=enero, 11=diciembre), día, hora, minuto
-   Ejemplo actual: 10 de mayo de 2026, a las 12:00
+   Ejemplo actual: 3 de mayo de 2026, a las 12:00
    ---------------------------------------------------------------- */
-const FECHA_OBJETIVO = new Date(2026, 4, 10, 12, 0, 0);
+const FECHA_OBJETIVO = new Date(2026, 4, 3, 12, 0, 0);
 /* ---------------------------------------------------------------- */
 
 
